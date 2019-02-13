@@ -1,0 +1,16 @@
+export const productDataFields = [
+  {name: 'status', label: 'Status', type: 'select', items: ['Pending List', 'Item Available', 'Item Sold', 'Pending Payment', 'Seller Payout Completed']},
+  {name: 'clientCode', label: 'Client Code', type: 'text'},
+  {name: 'title', label: 'Title', type: 'text'},
+  {name: 'brand', label: 'Brand', type: 'text'},
+  {name: 'modelNumber', label: 'Model Number', type: 'text'},
+  {name: 'dimensions', label: 'Dimensions', type: 'text'},
+  {name: 'weight', label: 'Weight', type: 'number'},
+  {name: 'quantity', label: 'Quantity', type: 'number'},
+  {name: 'category', label: 'Category', type: 'text'},
+  {name: 'description', label: 'Description', type: 'text'},
+  {name: 'location', label: 'Location', type: 'text'},
+  {name: 'listedPrice', label: 'Listed Price', type: 'number'},
+  {name: 'sellingPrice', label: 'Selling Price', type: 'number'},
+  {name: 'reserve', label: 'Reserve', type: 'number'},
+]

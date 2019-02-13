@@ -1,26 +1,27 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+
+import ConnectedProductList from './components/ProductList';
+import ConnectedAddProduct from './components/AddProduct';
+
+import ProductListPage from './pages/ProductListPage';
+import AddProductPage from './pages/AddProductPage';
+import UpdateProductPage from './pages/UpdateProductPage';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <BrowserRouter>
+        <div style={{display: 'flex', justifyContent: 'center', paddingTop: '40px', paddingBottom: '40px'}}>
+          <div>
+            <Switch>
+              <Route path='/update' component={UpdateProductPage}/>
+              <Route path='/add' component={AddProductPage}/>
+              <Route path='/' component={ProductListPage}/>
+            </Switch>
+          </div>
+        </div>
+      </BrowserRouter>
     );
   }
 }
